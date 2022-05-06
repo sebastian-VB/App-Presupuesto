@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-main.css">
+    <title>Presupuesto M</title>
+</head>
+<body>
+    
+    <header class="header">
+
+        <section class="header__user">
+
+            <div class="header__user-letter" id="avatarCircle">
+                <h1 id="avatar-letters">NP</h1>
+            </div>
+
+            <div class="header__user-info">
+                <h3 class="header__user-name" id="header-name">Nombre de la persona</h3>
+                <p class="header__user-user" id="header-user">usuario de la persona</p>
+            </div>
+
+        </section>
+
+        <section class="header__budget">
+
+            <div class="header__budget-left">
+                <h2 class="header__budget-title">Presupuesto Mensual</h2>
+                <p class="header__budget-money" id="totalBudget">$0,000.00</p>
+            </div>
+
+            <div class="header__IE-right">
+
+                <div class="header__IE header__IE-I">
+                    <h2 class="header__IE-title">Ingresos</h2>
+                    <p class="header__IE-money" id="totalI">+$0,000.00</p>
+                </div>
+
+                <div class="header__IE header__IE-E">
+                    <h2 class="header__IE-title">Egresos</h2>
+                    <p class="header__IE-money" id="totalE">-$0,000.00</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <main class="main">
+
+        <section class="main__inputs">
+
+            <select class="main__select focus" id="typeOpt">
+                <option value="income">+</option>
+                <option value="egress">-</option>
+            </select>
+
+            <div class="main__inputs-elementoI">
+
+                <div class="main__inputs-dscp">
+                    <input type="text" class="input focus main__input-dscp" name="description" id="description" placeholder="Ingresar descripción">
+                </div>
+
+                <div class="main__inputs-vb">
+
+                    <input type="number" class="input focus main__input-value" name="value" id="value" placeholder="Valor">
+                    
+                    <button class="main__input-buttom">
+                        <ion-icon name="checkmark-circle-outline" id="btn-add"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="main__info">
+
+            <div class="main__infoIE main__info-income">
+
+                <h3 class="main__titleIE main__title-income">Ingresos</h3>
+                <div class="mian__listIE main__list-income" id="list-income">
+                    
+                </div>
+
+            </div>
+
+            <div class="main__infoIE main__info-egress">
+
+                <h3 class="main__titleIE main__title-egress">Egresos</h3>
+                <div class="mian__listIE main__list-egress" id="list-egress">
+
+                </div>
+
+            </div>
+
+            <div class="main__info-graphic" id="containerGraphic">
+                <h3 class="main__graphic-title">Gráfico en porcentajes</h3>
+                <canvas class="main__graphic-circle" id="graphicC" role="img" width="350" height="350"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/class/elements.js" type="module"></script>
+    <script src="js/main-presupuesto.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800&display=swap');
+
+:root{
+    --blue-LB: rgb(11, 118, 218);
+    --green-correcto: rgb(30, 209, 45);
+    --red-incorrecto: rgb(218, 63, 63);
+    --borderR: 20px;
+    --hight-inputs: 45px;
+    --border-input: 2px solid rgb(216, 216, 216);
+    --widht-main-info: 80%;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #07384D;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__user{
+    display: flex;
+    padding: 30px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__user-letter{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(42, 155, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/*? CLASE QUE CAMBIARA DE COLOR AL AVATAR CON LAS INICIALES*/
+
+.header__user-letter-changeColor-green{
+    background-color: var(--green-correcto);
+}
+
+.header__user-letter-changeColor-red{
+    background-color: var(--red-incorrecto);
+}
+
+/*? -------------------*/
+
+.header__budget{
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header__budget-money{
+    font-size: 30px;
+    margin-top: 2.5%;
+}
+
+.header__IE-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.header__IE{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header__IE-title{ font-size: 20px;}
+
+.header__IE-money{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header__IE-I{
+    background-color: var(--green-correcto);
+}
+
+.header__IE-E{
+    background-color: var(--red-incorrecto);
+}
+
+.main__inputs{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f1eeee;
+}
+
+.main__inputs-elementoI{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main__select{
+    height: var(--hight-inputs);
+    width:60px;
+    border: var(--border-input);
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    transition: border 0.3s;
+    border-radius: 10px
+}
+
+.main__inputs-vb{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.input{
+    border: var(--border-input);
+    height: var(--hight-inputs);
+    border-radius: 10px;
+    padding: 0 10px 0 20px;
+}
+
+.focus:focus{
+    border: 2px solid var(--blue-LB);
+    outline: none;
+}
+
+.main__input-dscp{ width: 250px;}
+
+.main__input-value{ width: 150px;}
+
+.main__input-buttom{
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--blue-LB);
+    display: inline-block;
+    line-height: 1.1;
+    padding-top: 9px;
+
+}
+
+.main__input-buttom:active { transform: translateY(3px); }
+.main__input-buttom:focus{ outline: none; }
+
+.main__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.main__infoIE{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.main__titleIE{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.main__elementIE{
+    padding: 15px 10px;
+    border-bottom: 1px solid #e7e7e7;
+    width: var(--widht-main-info);
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.main__elementIE:first-child{ border-top: 1px solid #e7e7e7; }
+.main__elementIE:nth-child(even){ background-color: #f7f7f7; }
+
+.main__rightIE{
+    position: absolute;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.main__descriptionIE{
+    width: 50%;
+    text-align: start;
+    font-size: 15px;
+}
+
+.main__moneyIE{ transition: transform 0.3s; }
+
+
+.main__info-income .main__money-income,
+.main__info-income .main__delete-btn-income,
+.main__info-income .main__title-income{
+    color: var(--green-correcto);
+}
+
+.main__info-egress .main__money-egress,
+.main__info-egress .main__delete-btn-egress,
+.main__info-egress .main__title-egress{
+    color: var(--red-incorrecto);
+}
+
+.main__delete-btnIE{
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    display: block;
+
+}
+
+.main__info-graphic{
+    width: var(--widht-main-info);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    display: none;
+}
+
+.main__info-graphic-activo{ display: block; }
+
+.main__graphic-title{ margin-bottom: 30px; }
+
+.main__graphic-circle{
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 650px){
+    .main__inputs-elementoI{ flex-direction: row; }
+}
+
+@media (min-width: 1024px){
+
+    .header{
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-radius: 0;
+    }
+
+    .header__user{ gap: 15px;}
+
+    .header__budget{
+        width: 50%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header__budget-left{ width: 41%; }
+
+    .header__IE-right{ 
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    .header__IE{
+        width: 100%;
+        padding: 15px 30px;
+    }
+
+    .header__IE-money{ margin-left: 40px;}
+
+    .main__info{
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 30px;
+    }
+
+    .main__infoIE{
+        width: 65%;
+        gap: 10px;
+    }
+
+    .main__delete-btnIE{
+        display: none;
+    }
+
+    .main__delete-btnIE:focus{ outline: none; }
+    .main__delete-btnIE:active{ transform: translateY(2px); }
+
+    .main__elementIE:hover .main__delete-btnIE{ display: block; }
+    .main__elementIE:hover .main__moneyIE{ transform: translateX(-20px);}
+
+}
+
+
+
